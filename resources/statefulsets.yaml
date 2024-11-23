@@ -70,7 +70,9 @@ spec:
           configMap:
             name: prometheus-alertmanager
   volumeClaimTemplates:
-    - metadata:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
         name: storage
       spec:
         accessModes:
