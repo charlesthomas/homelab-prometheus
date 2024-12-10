@@ -13,7 +13,6 @@ spec:
     matchLabels:
       app.kubernetes.io/name: kube-state-metrics
       app.kubernetes.io/instance: prometheus
-  replicas: 1
   strategy:
     type: RollingUpdate
   revisionHistoryLimit: 10
@@ -83,7 +82,6 @@ metadata:
   name: prometheus-prometheus-pushgateway
   namespace: prometheus
 spec:
-  replicas: 1
   strategy:
     type: Recreate
   selector:
@@ -145,7 +143,6 @@ spec:
       app.kubernetes.io/component: server
       app.kubernetes.io/name: prometheus
       app.kubernetes.io/instance: prometheus
-  replicas: 1
   revisionHistoryLimit: 10
   strategy:
     type: Recreate
