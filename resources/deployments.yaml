@@ -58,7 +58,7 @@ spec:
             failureThreshold: 3
             httpGet:
               httpHeaders:
-              path: /readyz
+              path: /healthz
               port: 8080
               scheme: HTTP
             initialDelaySeconds: 5
