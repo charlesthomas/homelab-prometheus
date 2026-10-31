@@ -5,8 +5,10 @@ namespace: prometheus
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-prometheus
-commonLabels:
-  app: prometheus
+labels:
+- includeSelectors: true
+  pairs:
+    app: prometheus
 
 resources:
 - resources/configmaps.yaml
